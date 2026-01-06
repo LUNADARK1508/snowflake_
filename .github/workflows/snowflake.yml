@@ -47,11 +47,11 @@ jobs:
         run: |
           snow sql \
             --temporary-connection \
-            --account aqhohex-vg98736 \
+            --account il24358.ap-southeast-1 \
             --user "$SNOWFLAKE_USER" \
             --password "$SNOWFLAKE_PASSWORD" \
             --role SYSADMIN \
             --warehouse COMPUTE_WH \
-            --database GITHUB_DB \
-            --schema PUBLIC \
+            --database LUNA_DB \
+            --schema LUNA_SH \
             --filename sql/insert.sql
