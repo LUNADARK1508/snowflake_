@@ -54,4 +54,4 @@ jobs:
             --warehouse COMPUTE_WH \
             --database LUNA_DB \
             --schema LUNA_SH \
-            --filename sql/insert.sql
+            --filename SQL/DEPLOY_SQL
