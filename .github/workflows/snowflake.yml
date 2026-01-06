@@ -38,14 +38,14 @@ jobs:
             --warehouse COMPUTE_WH \
             --database LUNA_DB \
             --schema LUNA_SH \
-            --filename SQL/DEPLOY_SQL
+            --filename SQL/DEPLOY.sql
 
       - name: Run SQL - Insert Data
         env:
           SNOWFLAKE_USER: ${{ secrets.SNOWFLAKE_USER }}
           SNOWFLAKE_PASSWORD: ${{ secrets.SNOWFLAKE_PASSWORD }}
         run: |
-           snow sql \
+          snow sql \
             --temporary-connection \
             --account il24358.ap-southeast-1 \
             --user "$SNOWFLAKE_USER" \
@@ -54,4 +54,4 @@ jobs:
             --warehouse COMPUTE_WH \
             --database LUNA_DB \
             --schema LUNA_SH \
-            --filename SQL/DEPLOY_SQL
+            --filename SQL/DEPLOY.sql
