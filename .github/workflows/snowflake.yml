@@ -45,7 +45,7 @@ jobs:
           SNOWFLAKE_USER: ${{ secrets.SNOWFLAKE_USER }}
           SNOWFLAKE_PASSWORD: ${{ secrets.SNOWFLAKE_PASSWORD }}
         run: |
-          snow sql \
+           snow sql \
             --temporary-connection \
             --account il24358.ap-southeast-1 \
             --user "$SNOWFLAKE_USER" \
