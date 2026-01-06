@@ -38,7 +38,7 @@ jobs:
             --warehouse COMPUTE_WH \
             --database LUNA_DB \
             --schema LUNA_SH \
-            --filename sql/emp.sql
+            --filename SQL/DEPLOY_SQL
 
       - name: Run SQL - Insert Data
         env:
