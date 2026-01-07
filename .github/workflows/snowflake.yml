@@ -37,7 +37,7 @@ jobs:
             --role SYSADMIN \
             --warehouse COMPUTE_WH \
             --database LUNA_DB \
-            --schema LUNA_SH \
+            --schema PUBLIC \
             --filename SQL/DEPLOY_SQL
 
      
