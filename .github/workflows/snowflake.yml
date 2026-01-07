@@ -40,4 +40,19 @@ jobs:
             --schema PUBLIC \
             --filename SQL/DEPLOY_SQL
 
+      - name: Run SQL - Insert Data
+        env:
+          SNOWFLAKE_USER: ${{ secrets.SNOWFLAKE_USER }}
+          SNOWFLAKE_PASSWORD: ${{ secrets.SNOWFLAKE_PASSWORD }}
+        run: |
+          snow sql \
+            --temporary-connection \
+            --account il24358.ap-southeast-1 \
+            --user "$SNOWFLAKE_USER" \
+            --password "$SNOWFLAKE_PASSWORD" \
+            --role SYSADMIN \
+            --warehouse COMPUTE_WH \
+            --database LUNA_DB \
+            --schema PUBLIC \
+
      
